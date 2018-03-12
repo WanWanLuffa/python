@@ -1,0 +1,41 @@
+# coding=utf-8
+# 学生管理系统
+# time 2018.3.12
+# author Flam le
+# _*_ coding:UTF-8 _*_
+import os
+
+# 登陆
+
+
+
+while True:
+    username = raw_input("请输入您的用户名：")
+    PasswordNum = 0
+    # 判断用户名是否正确
+    if username == "mark":
+        # 用户名正确
+        # 请输入您的密码
+
+        while True:
+            password = raw_input("请输入您的密码：")
+            if "123456" == password:
+                print "您的密码输入争取，已经登陆成功"
+                # 需要什么操作
+                command = raw_input("请选择操作：")
+                if '1' == command:
+                    # 增加学员信息
+                    print("增加学员信息")
+                if '2' == command:
+                    pass
+                    # 今天就到这里
+            else:
+                print "您的密码错误，请重新输入"
+                PasswordNum += 1
+                if PasswordNum == 3:
+                    print"密码错误超过三次，请找回密码"
+                    break
+            pass
+    else:
+        # 用户名错误
+        print "您的用户名：%s 不存在，请重新输入" %username # 学会这种打印方法
